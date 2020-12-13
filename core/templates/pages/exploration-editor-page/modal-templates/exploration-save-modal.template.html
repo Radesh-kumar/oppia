@@ -1,4 +1,4 @@
-<div ng-class="{'oppia-save-exploration-wide-modal':showDiff}"> 
+<div ng-class="{'oppia-save-exploration-wide-modal':showDiff}">
   <div class="modal-header">
     <h3>
       <span ng-if="isExplorationPrivate">Save Draft</span>
@@ -15,7 +15,6 @@
       <span ng-if="!showDiff">Show Changes</span>
       <span ng-if="showDiff">Hide Changes</span>
     </button>
-  
     <version-diff-visualization ng-if="showDiff" diff-data="diffData"
                                 earlier-version-header="earlierVersionHeader"
                                 later-version-header="laterVersionHeader">

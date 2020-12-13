@@ -38,7 +38,7 @@ angular.module('oppia').directive('imageUploader', [
         errorMessage: '@',
         width: '@',
         getAllowedImageFormats: '&allowedImageFormats',
-        backgroundWhileUploading:'@'
+        backgroundWhileUploading: '@'
       },
       templateUrl: UrlInterpolationService.getDirectiveTemplateUrl(
         '/components/forms/custom-forms-directives/' +
@@ -46,7 +46,7 @@ angular.module('oppia').directive('imageUploader', [
       link: function(scope: ImageUploaderCustomScope, elt) {
         var onDragEnd = function(e) {
           e.preventDefault();
-          scope.backgroundWhileUploading=false;
+          scope.backgroundWhileUploading = false;
           scope.$apply();
         };
 
@@ -122,7 +122,7 @@ angular.module('oppia').directive('imageUploader', [
 
         $(elt).bind('dragover', function(e) {
           e.preventDefault();
-          scope.backgroundWhileUploading=true;
+          scope.backgroundWhileUploading = true;
           scope.$apply();
         });
 
