@@ -18,7 +18,7 @@
 
 import $ from 'jquery';
 
-describe('Exploration Save Modal Controller', function() {
+fdescribe('Exploration Save Modal Controller', function() {
   var $scope = null;
   var $uibModalInstance = null;
   var SiteAnalyticsService = null;
@@ -55,21 +55,10 @@ describe('Exploration Save Modal Controller', function() {
 
   it('should toggle exploration diff visibility when clicking on toggle diff' +
     ' button', function() {
-    var divMock = $(document.createElement('div'));
-    var jQuerySpy = spyOn(window, '$');
-
-    jQuerySpy.withArgs('.oppia-save-exploration-modal').and.returnValue(
-      divMock);
-    jQuerySpy.and.callThrough();
-
+    expect($scope.showDiff).toBe(false);
     $scope.onClickToggleDiffButton();
     expect($scope.showDiff).toBe(true);
-
-    expect(divMock.hasClass('oppia-save-exploration-wide-modal')).toBe(true);
-
     $scope.onClickToggleDiffButton();
     expect($scope.showDiff).toBe(false);
-
-    expect(divMock.hasClass('oppia-save-exploration-wide-modal')).toBe(false);
   });
 });
