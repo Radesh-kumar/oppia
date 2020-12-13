@@ -16,9 +16,7 @@
  * @fileoverview Unit tests for ExplorationSaveModalController.
  */
 
-import $ from 'jquery';
-
-fdescribe('Exploration Save Modal Controller', function() {
+describe('Exploration Save Modal Controller', function() {
   var $scope = null;
   var $uibModalInstance = null;
   var SiteAnalyticsService = null;
